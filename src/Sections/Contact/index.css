@@ -1,0 +1,47 @@
+
+  
+  .carousel-primary,
+  .carousel-secondary {
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+  }
+  .scroll-container {
+    overflow-x: auto; /* Agregamos un scroll horizontal solo si es necesario */
+    overflow-y: hidden; /* Ocultamos el scroll vertical */
+    white-space: nowrap;
+  }
+  
+  .icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon {
+    max-width: 150px; /* Aumentamos el tamaño de los iconos */
+    margin: 0 10px; /* Añadimos margen entre los iconos */
+  }
+  
+  .carousel-primary {
+    display: flex;
+    justify-content: space-around;
+    animation: scroll-horizontal 20s linear infinite;
+  }
+  
+  .carousel-secondary {
+    animation: scroll-horizontal 20s linear infinite;
+  }
+  
+  @keyframes scroll-horizontal {
+    0% {
+      transform: translateX(100%);
+    }
+  
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
