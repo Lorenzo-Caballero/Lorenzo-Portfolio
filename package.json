@@ -1,7 +1,7 @@
 {
   "name": "agency-website",
   "version": "0.1.0",
-  "homepage": "https://Lorenzo-Caballero.github.io/Lorenzo-Caballero-Portfolio",
+  "homepage": "https://lorenzo-caballero.github.io/Lorenzo-Portfolio/",
   "private": true,
   "dependencies": {
     "@huggingface/inference": "^2.6.7",
