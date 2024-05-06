@@ -1,47 +1,58 @@
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap; /* Evita que los elementos se envuelvan a la siguiente línea */
+  width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+}
 
-  
-  .carousel-primary,
-  .carousel-secondary {
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-  }
-  .scroll-container {
-    overflow-x: auto; /* Agregamos un scroll horizontal solo si es necesario */
-    overflow-y: hidden; /* Ocultamos el scroll vertical */
-    white-space: nowrap;
-  }
-  
+.icon {
+  max-width: 10%; /* Tamaño máximo de los iconos en pantallas grandes */
+  margin: 0 1%; /* Eliminamos el margen fijo y lo hacemos dinámico */
+}
+
+/* Consulta de medios para pantallas pequeñas o móviles */
+@media only screen and (max-width: 768px) {
   .icon-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-wrap: nowrap;
+  /* Permitir que los iconos se envuelvan en pantallas más pequeñas */
+    justify-content: space-around; /* Centrar los iconos horizontalmente */
   }
-  
+
   .icon {
-    max-width: 150px; /* Aumentamos el tamaño de los iconos */
-    margin: 0 10px; /* Añadimos margen entre los iconos */
+    max-width: 70%; /* Ajusta el tamaño máximo de los iconos en pantallas pequeñas o móviles */
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+    margin: 2% 1%; /* Margen ajustado para dispositivos móviles */
   }
-  
-  .carousel-primary {
-    display: flex;
-    justify-content: space-around;
-    animation: scroll-horizontal 20s linear infinite;
+}
+
+.scroll-container {
+  overflow-x: hidden;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center; /* Centramos los elementos horizontalmente */
+}
+
+.carousel-primary,
+.carousel-secondary {
+  display: flex;
+  justify-content: space-around;
+  width: 100%; /* Aseguramos que el contenedor principal ocupe todo el ancho disponible */
+}
+
+.carousel-primary {
+  animation: scroll-horizontal 20s linear infinite;
+}
+
+.carousel-secondary {
+  animation: scroll-horizontal 20s linear infinite;
+}
+
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(100%);
   }
-  
-  .carousel-secondary {
-    animation: scroll-horizontal 20s linear infinite;
+  100% {
+    transform: translateX(-100%);
   }
-  
-  @keyframes scroll-horizontal {
-    0% {
-      transform: translateX(100%);
-    }
-  
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-  
+}
