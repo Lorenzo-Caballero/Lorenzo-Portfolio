@@ -4,8 +4,8 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base:"https://github.com/Lorenzo-Caballero/Lorenzo-Portfolio",
   server: {
-    // Configura la carpeta de archivos estáticos
     fs: {
       strict: false
     }
